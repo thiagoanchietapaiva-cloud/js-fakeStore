@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Store</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+    <header class="flex items-center justify-between px-15 py-4 bg-green-400">
+        <div>
+            <input id="inputBusca" type="text" placeholder="Pesquisar produtos..."
+                class="w-80 h-10 rounded-l bg-white pl-4 outline-none">
+            <button id="btnBusca"
+                class="h-10 px-4 rounded-r bg-green-950 text-white font-bold hover:bg-green-800 transition-colors cursor-pointer">Buscar</button>
+        </div>
+        <div>
+            <select id="Categorias" class="h-10 rounded bg-white px-4">
+                <option>men's clothing</option>
+                <option>women's clothing</option>
+                <option>jewelery</option>
+                <option>electronics</option>
+            </select>
+            <select id="Ordenacao" class="h-10 rounded bg-white px-4">
+                <option value="preco">Ordenar por preço</option>
+                <option value="nota">Ordenar por nota</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="p-15 bg-slate-200">
+        <div id="cards" class="grid grid-cols-4 gap-4">
+            <div id="cards" class="grid grid-cols-4 gap-4">
+            </div>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
