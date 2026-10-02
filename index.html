@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake Store</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
 </head>
 
@@ -15,31 +16,40 @@
             <input id="inputBusca" type="text" placeholder="Pesquisar produtos..."
                 class="w-80 h-10 rounded-l bg-white pl-4 outline-none">
             <button id="btnBusca"
-                class="h-10 px-4 rounded-r bg-green-950 text-white font-bold hover:bg-green-800 transition-colors cursor-pointer">Buscar</button>
+                class="h-10 px-4 rounded-r bg-green-700 text-white font-bold hover:bg-green-800 transition-colors cursor-pointer">Buscar</button>
         </div>
+        
         <div>
             <select id="Categorias" class="h-10 rounded bg-white px-4">
-                <option value="">Todas</option>
+                <option value="">All</option>
                 <option>men's clothing</option>
                 <option>women's clothing</option>
                 <option>jewelery</option>
                 <option>electronics</option>
             </select>
             <select id="Ordenacao" class="h-10 rounded bg-white px-4">
-                <option value="preco">Ordenar por preço</option>
-                <option value="nota">Ordenar por nota</option>
+                <option value="preco">Order to price</option>
+                <option value="nota">Order by rating</option>
             </select>
+        </div><div class="flex items-center gap-10 bg-white px-4 py-2 rounded">
+            <span><box-icon name='cart'></box-icon></span>
+            <span id="contadorCarrinho" class="font-bold">0</span>
         </div>
     </header>
 
     <main class="p-15 bg-slate-200">
         <div id="cards" class="grid grid-cols-4 gap-4">
-            <div id="cards" class="grid grid-cols-4 gap-4">
-            </div>
+
+        </div>
         </div>
     </main>
 
     <script src="index.js"></script>
+    <div id="carrinho" class="bg-white p-4 mt-4 rounded shadow max-w-md ml-auto">
+        <h2 class="font-bold text-xl mb-2">Carrinho</h2>
+        <div id="listaCarrinho"></div>
+        <div id="totalCarrinho" class="font-bold text-right mt-2"></div>
+    </div>
 </body>
 
 </html>
